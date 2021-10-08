@@ -434,6 +434,7 @@ input::placeholder {
   
   .special__rating img {
       margin-right: 10px;
+      padding-bottom: 5px;
   }
   
   .special__date {
@@ -819,10 +820,6 @@ input::placeholder {
    
     .blog-news__image-link {
         width: 100%;
-    }
-
-    .blog-news__image-link img {
-
     }
 
     .blog-news__big-info {
