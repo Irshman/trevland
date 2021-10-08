@@ -13,6 +13,12 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".special-offers__prev",
     },
 
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+    },
+
     breakpoints: {
       320: {
         slidesPerView: 1,

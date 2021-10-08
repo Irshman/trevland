@@ -423,10 +423,6 @@ input::placeholder {
       margin-right: 10px;
   }
   
-  .special__country p {
-      width: 100px;
-  }
-  
   .special__rating {
       display: flex;
       align-items: center;
@@ -803,14 +799,17 @@ input::placeholder {
         width: 100%;
         display: block;
         margin: 0 auto;
+        padding: 0;
     }
 
     .blog-news__big-card {
-        padding-bottom: 30px;
+        padding: 0 5px 30px;
     }
+
 
     .blog-news__card {
         display: inline;
+        padding: 0px 5px 30px;
     }
 
     .blog-news__card-img {
