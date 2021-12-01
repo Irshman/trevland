@@ -6,6 +6,7 @@
 
 html, body {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -148,6 +149,132 @@ input::placeholder {
     margin-bottom: 20px;
 }
 
+/* Button back to top*/
+
+.my__btn {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    z-index: 99;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px solid rgba(159, 159, 159, 0.582);
+    background-color: Transparent;
+    outline: none;
+    color: #000;
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
+    transform: rotate(-90deg);
+    transform-origin: top right;
+    border-radius: 30px;
+    transition: all .3s;
+}
+
+.my__btn:hover {
+    background-color: rgba(132, 132, 132, 0.157);
+}
+
+.btn__text {
+    padding-right: 8px;
+}
+
+.btn__arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-right: 5px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+/* Style for modal window*/
+
+.modal {
+    position: fixed; 
+    z-index: 99; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+    overflow-y: hidden;
+}
+
+.modal__content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px 30px 30px 60px;
+    border: 1px solid #C9453B;
+    border-radius: 20px;
+    box-shadow: inset -5px -5px 10px #c9453b57;
+    width: 50%; 
+    }
+
+.modal__title {
+    font-size: 38px;
+}
+
+.modal__text {
+    color: #000;
+    font-size: 20px;
+    max-width: 458px;
+    margin-bottom: 40px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #C9453B;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+input {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #2C2C2C;
+    display: block;
+    width: 50%;
+    height: 37px;
+    border: 1px solid  #E5E5E5;;
+    border-radius: 4px;
+    padding: 0 12px;
+    transition: all .3s;
+    outline: none;
+}
+
+input:focus {
+    border-color: #C9453B;
+}
+
+input::placeholder {
+    opacity: 0.5;
+}
+
+.btn__ok {
+    background-color: #C9453B;
+    margin-right: 20px;
+    font-weight: 700;
+}
+
+.btn__close {
+    font-weight: 700;
+}
 
 /* Style for block hero */
 
@@ -156,6 +283,7 @@ input::placeholder {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
     color: #fff;
     margin-bottom: 70px;
 }
@@ -323,13 +451,13 @@ input::placeholder {
 }
 
 .popular-location__image-link img {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   transition: all 0.1s;
-   object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.1s;
+    object-fit: cover;
 }
 
 .popular-location__image-link:hover img {
@@ -366,7 +494,6 @@ input::placeholder {
 
 .special__wrap {
     display: flex;
- 
 }
 
 .special-offers__slide {
@@ -376,16 +503,16 @@ input::placeholder {
 .special__img{
     width: 262px;
     height: 173px;
-  }
-  
-  .special__img-link {
+}
+
+.special__img-link {
     display: block;
     position: relative;
     overflow: hidden;
     padding-bottom: 62%;
-  }
-  
-  .special__img-link img {
+}
+
+.special__img-link img {
     border-radius: 10px;
     position: absolute;
     top: 0;
@@ -393,68 +520,68 @@ input::placeholder {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  
-  .special__card-title {
-      width: 195px;
-      font-family: 'Gelasio', Arial, Helvetica, sans-serif;
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 1.5;
-      color: #000;
-      margin: 20px 0 8px 0;
-  }
+}
 
-  .special__card-title:hover {
+.special__card-title {
+    width: 195px;
+    font-family: 'Gelasio', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #000;
+    margin: 20px 0 8px 0;
+}
+
+.special__card-title:hover {
     color: #C9453B;
 }
-  
-  .special__info {
-      display: flex;
-  }
-  
-  
-  .special__country {
-      display: flex;
-      margin-right: 50px;
-  }
-  
-  .special__country img {
-      margin-right: 10px;
-  }
-  
-  .special__rating {
-      display: flex;
-      align-items: center;
-  }
-  
-  .special__rating img {
-      margin-right: 10px;
-      padding-bottom: 5px;
-  }
-  
-  .special__date {
-      margin-top: 8px;
-      font-size: 16px;
-  }
-  
-  
-  .special__price {
-      font-size: 16px;
-      margin-top: 8px;
-  }
-  
-  .special__price span {
-      font-size: 18px;
-      font-weight: 500;
-      color: black;
-  }
 
-  .swiper-slide {
+.special__info {
     display: flex;
-    justify-content: center;
+}
+
+
+.special__country {
+    display: flex;
+    margin-right: 50px;
+}
+
+.special__country img {
+    margin-right: 10px;
+}
+
+.special__rating {
+    display: flex;
     align-items: center;
-  }
+}
+
+.special__rating img {
+    margin-right: 10px;
+    padding-bottom: 5px;
+}
+
+.special__date {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+
+.special__price {
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.special__price span {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+.swiper-slide {
+display: flex;
+justify-content: center;
+align-items: center;
+}
 
 .special-offers__controls {
     display: flex;
@@ -855,6 +982,31 @@ input::placeholder {
         padding-right: 10px;
     }
 
+    /**/
+
+    .modal__content {
+        padding: 10px 15px 15px 30px;
+        width: 80%; 
+        }
+    
+    .modal__title {
+        font-size: 22px;
+    }
+
+    .modal__text {
+        font-size: 16px;
+    }
+    
+    input {
+        width: 80%;
+    }
+
+    .user-title {
+        font-size: 14px;
+    }
+
+    /**/
+
     .hero {
         margin-bottom: 50px;
     } 
@@ -885,7 +1037,7 @@ input::placeholder {
     }
 
     .head-info {
-       margin-bottom: 25px; 
+        margin-bottom: 25px; 
     }
 
     .head-info__title {
