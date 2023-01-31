@@ -128,3 +128,110 @@ btnGetInput.onclick = function() {
 
 });
 
+
+// Animation
+
+// Hero block
+
+gsap.from(".hero__title", {
+  opacity: 0, 
+  y: 200, 
+  duration: 1
+});
+
+gsap.from(".hero__descr", {
+  opacity: 0, 
+  y: 200, 
+  duration: 1,
+  delay: 0.2
+});
+
+gsap.from(".hero__more", {
+  opacity: 0, 
+  y: 200, 
+  duration: 1,
+  delay: 0.4
+});
+
+// popular block 
+
+gsap.from(".head-info-1", {
+  scrollTrigger: {
+    trigger: ".head-info-1",
+    togglePlay: 'restart none none none',
+    start: 'top 90%',
+  },
+  opacity: 0, 
+  x: -500, 
+  duration: 1.5,
+});
+
+gsap.from(".popular-location__wrap", {
+  scrollTrigger: {
+    trigger: ".popular-location__wrap",
+    togglePlay: 'restart none none none',
+    start: 'top 90%',
+  },
+  opacity: 0, 
+  x: -500, 
+  duration: 2,
+});
+
+// swiper block special block 
+
+gsap.from(".head-info-2", {
+  scrollTrigger: {
+    trigger: ".head-info-2",
+    togglePlay: 'restart none none none',
+    start: 'top 90%',
+  },
+  opacity: 0, 
+  x: 500, 
+  duration: 1.5,
+});
+
+gsap.from(".swiper", {
+  scrollTrigger: {
+    trigger: ".swiper",
+    togglePlay: 'restart none none none',
+    start: 'top 90%',
+  },
+  opacity: 0, 
+  x: 500, 
+  duration: 2,
+});
+
+// block news 
+
+gsap.from(".head-info-3", {
+  scrollTrigger: {
+    trigger: ".head-info-3",
+    togglePlay: 'restart none none none',
+    start: 'top 90%',
+  },
+  opacity: 0, 
+  x: -500, 
+  duration: 1.5,
+});
+
+gsap.from(".blog-news__big-card", {
+  scrollTrigger: {
+    trigger: ".blog-news__big-card",
+    togglePlay: 'restart none none none',
+    start: 'top 90%',
+  },
+  opacity: 0, 
+  x: -500, 
+  duration: 2,
+});
+
+gsap.from(".blog-news__cards", {
+  scrollTrigger: {
+    trigger: ".blog-news__cards",
+    togglePlay: 'restart none none none',
+    start: 'top 90%',
+  },
+  opacity: 0, 
+  x: 500, 
+  duration: 1.5,
+});
